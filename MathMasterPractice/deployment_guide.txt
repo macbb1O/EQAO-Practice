@@ -1,0 +1,28 @@
+DEPLOYMENT GUIDE for EQAO Math Practice Test
+=============================================
+
+IMPORTANT: Only deploy the Streamlit app files. Do NOT use index.html.
+
+Files needed for deployment:
+- app.py (main application)
+- question_generator.py (question logic)
+- curriculum_strands.py (curriculum data)
+- .streamlit/config.toml (configuration)
+- pyproject.toml (dependencies)
+
+Files to IGNORE during deployment:
+- index.html (not needed - causes confusion)
+- setup.sh (only for manual setup)
+- README.md (documentation only)
+
+DEPLOYMENT STEPS:
+1. Upload these files: app.py, question_generator.py, curriculum_strands.py, .streamlit/config.toml, pyproject.toml
+2. Set your deployment command to: streamlit run app.py --server.port 5000
+3. Make sure your platform supports Python 3.11+ and can install streamlit
+
+The app will automatically show a welcome screen with the "Start Practice Test" button when users visit your site.
+
+TROUBLESHOOTING:
+- If button doesn't work: Check browser console for JavaScript errors
+- If app won't start: Verify streamlit is installed and port 5000 is available
+- If questions don't generate: Check that all Python files are uploaded correctly
